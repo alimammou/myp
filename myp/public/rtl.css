@@ -1,0 +1,48 @@
+body {
+    direction: rtl;
+}
+
+.grommetux-anchor.grommetux-anchor--animate-icon.grommetux-anchor--icon.grommetux-anchor--icon-label.grommetux-anchor--primary >
+.grommetux-control-icon.grommetux-control-icon-user-admin.grommetux-control-icon--responsive
+{
+    margin-right:none;
+    margin-left: 12px;
+}
+
+.grommetux-box.grommetux-box--direction-row.grommetux-box--pad-between-small >
+.grommetux-control-icon.grommetux-control-icon-globe.grommetux-control-icon--responsive{
+
+    margin-right:none;
+    margin-left: 12px;
+}
+
+span.grommetux-anchor__icon{
+    margin-right:0;
+    margin-left:12px;
+}
+
+.grommetux-box.grommetux-box--direction-column.grommetux-box--responsive.grommetux-box--pad-none.arrow{
+    margin-right:0;
+    margin-left:48px;
+}
+
+
+@media screen and (max-width: 44.9375em)
+{.grommetux-box--direction-row.grommetux-box--responsive.grommetux-box--pad-between-large.arrow>*:not(:last-child){
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 24px;
+}}
+
+
+.grommetux-box--direction-row.grommetux-box--pad-between-large>*:not(:last-child){
+    margin-right: 0;
+    margin-left: 48px;
+}
+.grommetux-headline--small{
+    line-height: 1.25;
+}
+
+.grommetux-value--large .grommetux-value__annotated{
+    line-height: 1.5;
+}

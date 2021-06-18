@@ -1,0 +1,10 @@
+swiftmailer:
+  url: "%env(MAILER_URL)%"
+  spool: { type: "memory" }
+  #   disable_delivery: true
+  username: noreply@myplebanon.com
+  password: iamthekobra12
+  auth_mode: login
+  host: smtp.myplebanon.com
+  transport: smtp
+  port: 25

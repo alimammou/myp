@@ -1,0 +1,4 @@
+ * @JoinTable(name="password_tocken",
+     *      joinColumns={@JoinColumn(name="user_id",referencedColumnName="id")},
+     *      inverseJoinColumns={@JoinColumn(name=")}
+     * )

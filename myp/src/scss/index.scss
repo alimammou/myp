@@ -1,0 +1,173 @@
+@import "./_py.defaults";
+@import "./grommet-core/index";
+@import "./vanilla/objects.button-vanilla";
+
+@supports (--custom: property) {
+  [style*="--aspect-ratio"] {
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    display: flex;
+    // flex: 1;
+    // width: 100%;
+  }
+  [style*="--aspect-ratio"]::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+  [style*="--aspect-ratio"] > :first-child {
+    position: absolute;
+    max-width: 100%;
+  }
+  [style*="--background-image"] {
+    background-size: contain;
+    background-position: center;
+    background-color: "white";
+    background-image: var(--background-image);
+  }
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+
+  -webkit-transform: translate3d(0, -50px, 0);
+  -ms-transform: translate3d(0, -50px, 0);
+  transform: translate3d(0, -50px, 0);
+
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  -ms-transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+}
+
+.pace.pace-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.pace .pace-progress {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 5px;
+  background: #e90f92;
+
+  pointer-events: none;
+}
+
+.dropper {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #e90f92;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.dropper:hover {
+  border: 4px solid #e90f92;
+  transform: scale(1.05);
+}
+
+.dropper > input {
+  display: none;
+}
+
+.dropper.dropper-active {
+  transform: scale(1.05);
+}
+
+.dropper.dropper-accept {
+  border: 2px solid #4eb976;
+}
+
+.anchor-purp {
+  color: #e90f92 !important;
+  font-size: 16px !important;
+}
+
+.anchor-red {
+  color: #ff324d !important;
+  font-size: 16px !important;
+}
+
+.anchor-violet {
+  color: #49516f !important;
+  font-size: 16px !important;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.observe-loading {
+  animation-duration: 1.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: darkgray !important;
+  background: linear-gradient(
+    to right,
+    #eeeeee 10%,
+    #dddddd 18%,
+    #eeeeee 33%
+  ) !important;
+  background-size: 800px 104px !important;
+  height: 100px !important;
+  position: relative;
+}
+
+.grommet.grommetux-drop{
+  z-index: 999999999;
+}
+
+@media screen and (max-width: 44.9375em){
+  .grommetux-box.grommetux-box--direction-row.grommetux-box--justify-between.grommetux-box--align-center.grommetux-box--pad-horizontal-none.grommetux-box--pad-vertical-none.grommetux-box--pad-between-small.grommetux-header.grommetux-accordion-panel__header{
+    font-weight: 300;
+    color: rgb(51,51,51);
+    font-size: 24px;
+    padding: 0 7px;
+  }
+
+  .grommetux-form:not(.grommetux-form--plain){
+    width: auto !important;
+  }
+}
+
+@media screen and (min-width:45em){
+.grommetux-box.grommetux-box--direction-row.grommetux-box--justify-between.grommetux-box--align-center.grommetux-box--pad-horizontal-none.grommetux-box--pad-vertical-none.grommetux-box--pad-between-small.grommetux-header.grommetux-accordion-panel__header{
+  font-weight: 500 !important;
+  color: rgb(51,51,51);
+  font-size: 24px;
+  padding: 0 19px;
+}
+}
+
+.grommetux-box.grommetux-box--direction-column.grommetux-box--responsive.grommetux-box--pad-none.grommetux-collapsible{
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}

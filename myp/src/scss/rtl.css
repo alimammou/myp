@@ -1,0 +1,22 @@
+body {
+    direction: rtl;
+}
+
+.grommetux-anchor.grommetux-anchor--animate-icon.grommetux-anchor--icon.grommetux-anchor--icon-label.grommetux-anchor--primary >
+.grommetux-control-icon.grommetux-control-icon-user-admin.grommetux-control-icon--responsive
+{
+    margin-right:none;
+    margin-left: 12px;
+}
+
+.grommetux-box.grommetux-box--direction-row.grommetux-box--pad-between-small >
+.grommetux-control-icon.grommetux-control-icon-globe.grommetux-control-icon--responsive{
+
+    margin-right:none;
+    margin-left: 12px;
+}
+
+span.grommetux-anchor__icon{
+    margin-right:none;
+    margin-left:12px;
+}

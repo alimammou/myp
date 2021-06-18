@@ -1,0 +1,13 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+api:
+  resource: "."
+  type: "api_platform"
+  prefix: "/"
+
+# app:
+#   resource: "@AppBundle/Action/"
+#   type: "annotation"
+#   prefix: "/"
